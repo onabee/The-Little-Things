@@ -1,0 +1,11 @@
+language: node_js
+node_js: "stable"
+services:
+  - mongodb
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start" # (X Virtual Framebuffer) to imitate a display
+  - "node app.js &" # run express in background
+  - sleep 3 # give xvfb some time to start
+script:
+  - npm test
