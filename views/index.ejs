@@ -33,14 +33,15 @@
     OR
     <label>Zip Code<i>(5 digits)</i>:</label>
     <input type="text" ng-model="charities.zip" placeholder="i.e.:  11701">
-    <button ng-click="charities.fetch()"><a href="./search.png"></a></button>
+    <button id="search" ng-click="charities.fetch()"><a href="./public/images/search.png"></a></button>
+
 
     <ul id="charities">  
     <!-- ng-if there are no charities matching that zip code, show error message (i.e. "-->
     <!-- ng-if there is, show below info -->
       <li ng-repeat="charity in charities.all">
 
-        <strong>{{charity.charityName}}</strong>
+        <p><strong>{{charity.charityName}}</strong></p>
         {{charity.category}}
         {{charity.city}} {{charity.state}} {{charity.zipCode}}
         {{charity.missionStatement}}
