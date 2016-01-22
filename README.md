@@ -7,3 +7,4 @@ Maybe also use an API for volunteer organizations/opportunities near you.
 To be honest I really don't know what to do for the ERD. 
 
 ![Wireframe](./readme-stuff/wireframe-index.png)
+
