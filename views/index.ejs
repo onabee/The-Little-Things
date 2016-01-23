@@ -42,9 +42,9 @@
       <li ng-repeat="charity in charities.all">
 
         <p><strong>{{charity.charityName}}</strong></p>
-        {{charity.category}}
-        {{charity.city}} {{charity.state}} {{charity.zipCode}}
-        {{charity.missionStatement}}
+        <p>Category: {{charity.category}}</p>
+        <p>{{charity.city}}, {{charity.state}} {{charity.zipCode}}</p>
+        <p>{{charity.missionStatement}}</p>
         <a href="{{charity.website}}">{{charity.website}}</a>
       </li>
     </ul>
