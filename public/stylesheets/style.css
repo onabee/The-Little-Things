@@ -35,15 +35,15 @@ body {
 
 #logo {
   font-family: 'Sue Ellen Francisco', cursive;
-  font-size: 30px;
+  font-size: 35px;
   text-align: right;
-  padding-top: 5px;
 }
 
 .header-bar {
   background-color: rgba(60, 122, 43, 0.85);
-  height: 65px;
-  font-family: 'Sue Ellen Francisco', cursive;
+  height: 75px;
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
 /*  font-size: 20px;*/
   color: white;
   padding: 10px;
@@ -53,39 +53,39 @@ body {
 
 .main {
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.65);
   width: 90%;
   padding: 35px;
   font-family: 'Lato', sans-serif; 
   vertical-align: center;
-  height: auto;
+  height: 695px;
+  max-height: 695px;
+  overflow: scroll;
 }
 
 #tagline {
   vertical-align: center;
-  padding-top: 5px;
+  padding-top: 8px;
   text-align: left;
   font-size: 20px;
 }
 
 .headline {
   font-family: 'Lato', sans-serif; 
-  font-size: 25px;
-  color: #205C54;
+  font-size: 20px;
+  color: #39754C;
   text-align: center;
-  padding-top: 25px;
-  left: 15px;
-  right: 15px;
+  padding: 25px;
 }
 
 h2 {
   padding: 5px;
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 40px;
+  color: #82B863;
+  line-height: 60px;
 }
 
-.charities {
-  vertical-align: middle;
-  vertical-align: center;
-}
 
 .generators {
   margin: 0 auto;
@@ -95,22 +95,49 @@ h2 {
   font-family: 'Lato', sans-serif; 
 }
 
+.generated {
+  margin: 10px;
+  padding: 20px;
+  font-size: 22px;
+  text-align: center;
+  color: #4D7A2B;
+}
+
+.api {
+  vertical-align: middle;
+  vertical-align: center;
+  text-align: center;
+}
+
+.instructions {
+  font-size: 18px;
+  color: #4F7539;
+  line-height: 8px;
+  font-weight: 400;
+}
+
+#caption {
+  font-weight: 300;
+  font-style: italic;
+}
+
+li {
+  padding: 10px;
+  font-size: 20px;
+}
+
 a:link {
-  color: #7FDB39;
+  color: #82B863;
 }
 
 a:hover{
-  color: #19C2AE;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #457A1C;
+  color: #63ADB8;
+  text-decoration: underline;
 }
 
 label {
   vertical-align: top;
-  color: #294126;
+  color: #34693A;
   font-size: 11px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -119,10 +146,11 @@ label {
 
 #or {
   font-size: 10px;
+  padding: 20px;
 }
 
 button {
-  background-color: #63ADB8;
+  background-color: #4F7539;
   border: none;
   box-shadow: none;
   width: 40%;
@@ -139,7 +167,7 @@ button {
 }
 
 input {
-  width: 150px;
+  width: 175px;
 }
 
 /* glowing input boxes */
@@ -151,7 +179,7 @@ input[type=text], textarea {
   outline:none;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #6B9E44;
 }
  
 input[type=text]:focus, textarea:focus {
@@ -170,7 +198,7 @@ input[type=text]:focus, textarea:focus {
 }
 
 button:hover{
-  background-color: #316E82;
+  background-color: #63ADB8;
 }
 
 #search {
@@ -178,7 +206,7 @@ button:hover{
   vertical-align: middle;
   top: -10px;
   width: auto;
-  float: right;
+  float: left;
 /*  background-attachment: fixed;*/
 }
 
@@ -192,10 +220,10 @@ button:hover{
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 36px;
+  height: 31px;
   background-color: rgba(107, 158, 68, 0.5);
   color: white;
   text-align: center;
   vertical-align: middle;
-  padding-top: 8px;
+  padding-top: 5px;
 }
