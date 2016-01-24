@@ -81,6 +81,8 @@
           <ul>  
             <!-- ng-if there are no charities matching that zip code, show error message (i.e. "-->
             <!-- ng-if there is, show below info -->
+            <!-- make this div itself scrollable so website isn't super long -->
+            <!-- this text is also way too huge. need to reduce -->
             <li ng-repeat="charity in charities.all">
               <h1>{{charity.charityName}}</strong></p>
               <p>Category: {{charity.category}}</p>

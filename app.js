@@ -64,7 +64,7 @@ app.get('/api', function(req, res){
       var mission = charData.missionStatement;
       var website = charData.website;
 
-      res.send(data);
+      // res.send(data);
     }
   })
   // If the city and state are entered in index, do following
