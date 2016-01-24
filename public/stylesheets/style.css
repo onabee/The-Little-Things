@@ -1,3 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700,300italic,300|Sue+Ellen+Francisco);
+/*font-family: 'Lato', sans-serif;*/
+/*font-family: 'Sue Ellen Francisco', cursive;*/
+/*example: h1 { font-family: 'Metrophobic', Arial, serif; font-weight: 400; }*/
+
+/*colors:  #6B9E44, #6ABA83, #76B56B, #82B863, #63ADB8, #83B863, #44989E, #55A39E or rgba(85, 163, 158, 1), #81A355 or rgba(129, 163, 85, 1) */
+
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
 @-ms-viewport       { width: device-width; }
@@ -10,23 +17,129 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
-  background: url();
-}
-
-.footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
+  margin: 0 auto;
+/*  margin-bottom: 60px;*/
+  background: url(../images/mountains-bg.jpg) #55A39E;
+  background-position: fixed;
+  background-size: cover;
+  vertical-align: middle;
 }
 
 .container {
+  margin: 10 auto;
   width: auto;
-  max-width: 680px;
-  padding: 0 15px;
+/*  max-width: 680px;*/
+  padding: 10px;
+  vertical-align: middle;
+}
+
+#logo {
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 30px;
+  text-align: right;
+  padding-top: 5px;
+}
+
+.header-bar {
+  background-color: rgba(60, 122, 43, 0.85);
+  height: 65px;
+  font-family: 'Sue Ellen Francisco', cursive;
+/*  font-size: 20px;*/
+  color: white;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.main {
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.55);
+  width: 90%;
+  padding: 35px;
+  font-family: 'Lato', sans-serif; 
+  vertical-align: center;
+  height: auto;
+}
+
+#tagline {
+  vertical-align: center;
+  padding-top: 5px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.headline {
+  font-family: 'Lato', sans-serif; 
+  font-size: 25px;
+  color: #205C54;
+  text-align: center;
+  padding-top: 25px;
+  left: 15px;
+  right: 15px;
+}
+
+h2 {
+  padding: 5px;
+}
+
+.charities {
+  vertical-align: middle;
+  vertical-align: center;
+}
+
+.generators {
+  margin: 0 auto;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  font-family: 'Lato', sans-serif; 
+}
+
+a:link {
+  color: #7FDB39;
+}
+
+a:hover{
+  color: #19C2AE;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #457A1C;
+}
+
+label {
+  vertical-align: top;
+  color: #294126;
+  font-size: 11px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  display: inline-block;
+}
+
+#or {
+  font-size: 10px;
+}
+
+button {
+  background-color: #63ADB8;
+  border: none;
+  box-shadow: none;
+  width: 40%;
+  vertical-align: middle;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+input {
+  width: 150px;
 }
 
 /* glowing input boxes */
@@ -48,4 +161,41 @@ input[type=text]:focus, textarea:focus {
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid rgba(81, 203, 238, 1);;
+}
+
+
+.col-md-12 {
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+button:hover{
+  background-color: #316E82;
+}
+
+#search {
+  height: 35px;
+  vertical-align: middle;
+  top: -10px;
+  width: auto;
+  float: right;
+/*  background-attachment: fixed;*/
+}
+
+.results {
+  display: block;
+  padding: 15px;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 36px;
+  background-color: rgba(107, 158, 68, 0.5);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 8px;
 }
