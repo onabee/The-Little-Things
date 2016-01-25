@@ -42,7 +42,8 @@ app.get('/api', function(req, res){
   var api_key = process.env.ORGHUNTER_API_KEY;
   var city = req.query.city;
   var state = req.query.state;
-  var zipCode = req.query.zipCode; 
+  var zipCode = req.query.zipCode;
+  // var missionStatement = res.params.missionStatement;
   console.log(city);
   console.log(state);
   console.log(zipCode);
@@ -51,7 +52,6 @@ app.get('/api', function(req, res){
     request(base_url + "user_key=" + api_key + "&zipCode=" + zipCode + "&eligible=1", function(err, response, data){
       console.log(err, data);
       if (!err && response.statusCode == 200){
-
         res.send(data);
       }res.end();
     }) 
