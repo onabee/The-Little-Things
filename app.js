@@ -42,46 +42,30 @@ app.get('/api', function(req, res){
   var api_key = process.env.ORGHUNTER_API_KEY;
   var city = req.query.city;
   var state = req.query.state;
-  var zipCode = req.query.zipCode;
+  var zipCode = req.query.zipCode; 
   console.log(city);
   console.log(state);
   console.log(zipCode);
-  console.log(api_key);
   // If the zipCode is entered in input, do request for zip
-  if (zipCode) {
+  if (req.query.zipCode !== "undefined") {
     request(base_url + "user_key=" + api_key + "&zipCode=" + zipCode + "&eligible=1", function(err, response, data){
       console.log(err, data);
       if (!err && response.statusCode == 200){
-        var charData = qs.parse(data);
-        var charityName = charData.charityName;
-        var city = charData.city;
-        var state = charData.state;
-        var category = charData.category;
-        var zip = charData.zipCode;
-        var mission = charData.missionStatement;
-        var website = charData.website;
 
         res.send(data);
-      }
-    })
+      }res.end();
+    }) 
   // If the city and state are entered in input, do following
-  } else if (city || state) {
+  } else if (req.query.city !== "undefined" && req.query.state !== "undefined") {
     request(base_url + "user_key=" + api_key + "&city=" + city + "&state=" + state + "&eligible=1", function(err, response, data){
       console.log(err, data);
       if (!err && response.statusCode == 200){
-        var charData = qs.parse(data);
-        var charityName = charData.charityName;
-        var city = charData.city;
-        var state = charData.state;
-        var category = charData.category;
-        var zip = charData.zipCode;
-        var mission = charData.missionStatement;
-        var website = charData.website;
 
         res.send(data);
-      }
-    })
+      }res.end();
+    }) 
   }
+
 });
 
 

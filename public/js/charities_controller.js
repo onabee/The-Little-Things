@@ -20,6 +20,8 @@ function CharitiesController($http){
         // charities.all.push(charity);
       });
     // charities.search = city + state || zip;
-  };
 
+    // clear input fields after submit
+    // can also be clicked by pressing enter key
+  };
 };

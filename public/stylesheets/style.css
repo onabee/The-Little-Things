@@ -215,6 +215,10 @@ button:hover{
   padding: 15px;
 }
 
+li {
+  list-style-type: none;
+}
+
 .footer{
   position: absolute;
   bottom: 0;
