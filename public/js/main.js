@@ -63,20 +63,38 @@ $(document).ready(function(){
   $generateActsBtn.on('click', generateActs);
   $generateFactsBtn.on('click', generateFacts);
 
-  // if city field is being typed in, highlight city and state fields
-  // underneath input box, show "please enter a state"
-  // if($('#city').val().length != 0){ ("#state").is(":focus") }
+  // search button can be clicked by pressing enter on input fields
+  $('#state').keypress(function(event){
+    if (event.keyCode == 13) {
+      $('#search').click();
+      $('input').val('');
+      $('.error').val('');
+    }
+  });
+
+  $('#zip').keypress(function(event){
+    if (event.keyCode == 13) {
+      $('#search').click();
+      $('input').val('');
+      $('.error').val('');
+    }
+  });
+
 
   // if city/state fields are not empty, disable zipcode & vice versa
-  //   $('input').blur(function(){
-    //   if ($('#dis_rm').val().length != 0){
-    //     $('#dis_per').attr('disabled', 'disabled');
-    //   } else if ($('#dis_per').val().length != 0){
-    //     $('#dis_rm').attr('disabled', 'disabled');
-    //   } else {
-    //     $("input").removeAttr('disabled');
-    //   }
-  //  });
+  $('input').blur(function(){
+    if ($('#city').val().length !== 0 && $('#state').val().length !== 0) {
+      $('#zip').attr('disabled', 'disabled').css('border-color', '#C4C4C4');
+      $('.error').append('<p> please only enter either city & state OR zipcode </p>').css('color', 'red');
+    } else if ($('#zip').val().length != 0){
+      $('#city').attr('disabled', 'disabled').css('border-color', '#C4C4C4');
+      $('#state').attr('disabled', 'disabled').css('border-color', '#C4C4C4');
+      $('.error').append('<p> please only enter either city & state OR zipcode </p>').css('color', 'red');
+    } else {
+      $("input").removeAttr('disabled').css('border-color', '#6B9E44');
+      $('.error').val('');
+    }
+   });
   // then show "please only enter either a City & State OR a Zip Code"
   
 });

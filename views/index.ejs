@@ -58,11 +58,9 @@
       <div ng-controller="CharitiesController as charities">
         
         <div class="container">
-          <!-- only allow user to fill in either City and state OR zipcode -->
           <!-- if city is filled in and state is not, show error "please enter a state" -->
-          <!-- if zipcode is filled in, don't allow user to enter info in the city/state fields -->
-          <div class="row">
-            <div class="col-md-9">
+          <form name="searchForm" class="form row">
+            <div class="col-md-9 col-md-offset-1">
               <label for="city">City:</label>
               <input type="text" name="city" id="city" ng-model="charities.city" placeholder="i.e.:  Amityville" tabindex="1">
               <label for="state">State:</label>
@@ -71,11 +69,13 @@
               <label for="zip">Zip Code:</label>
               <input type="text" name="zip" id="zip" ng-model="charities.zip" placeholder="i.e.:  11701" tabindex="3">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
               <input style="vertical-align: middle;" id="search" type="image" ng-click="charities.fetch()" src="/images/search.png"></input>
-              <!-- have search button clickable by pressing 'enter' -->
             </div>
-          </div> <!-- end of row -->
+          </form> <!-- end of row -->
+          <div class="error">
+              
+          </div>
         </div> 
         
         <div class="results container-fluid">
@@ -83,7 +83,6 @@
             <!-- ng-if there are no charities matching that zip code, show error message (i.e. "-->
             <!-- ng-if there is, show below info -->
             <!-- make this div itself scrollable so website isn't super long -->
-            <!-- this text is also way too huge. need to reduce -->
             <li ng-repeat="charity in charities.all">
               <h4><strong>{{charity.charityName}}</strong></h4>
               <p>Category: {{charity.category}}</p>

@@ -175,7 +175,6 @@ input[type=text], textarea {
   transition: all 0.30s ease-in-out;
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
-  border:#fff 1px solid;
   outline:none;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
