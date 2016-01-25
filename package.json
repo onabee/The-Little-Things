@@ -32,7 +32,8 @@
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
     "path": "^0.12.7",
-    "querystring": "^0.2.0"
+    "querystring": "^0.2.0",
+    "request": "^2.67.0"
   },
   "devDependencies": {
     "nodemon": "^1.8.1"
