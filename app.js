@@ -68,17 +68,6 @@ app.get('/api', function(req, res){
 
 });
 
-
-// app.get('/config', function(req, res){
-//   if (env === 'develop'){
-//     res.send(developConfig);
-//   }else if(env === 'staging') {
-//     res.send(stagingConfig);
-//   }else if(env === 'prod') {
-//     res.send(prodConfig);
-//   }
-// })
-
 // db.connect({
 //   host: process.env.DB_HOST,
 //   username: process.env.DB_USER,
