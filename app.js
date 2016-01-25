@@ -31,6 +31,19 @@ app.use(express.static(path.join(__dirname, '/bower_components')));
 //   process.on('exit', db.close);
 // });
 
+// db.connect({
+//   host: process.env.DB_HOST,
+//   username: process.env.DB_USER,
+//   password: process.env.DB_PASS
+// });
+
+// db.collection('kittens').find({}).toArray(function(err, results){
+//   console.log(results);
+// });
+
+// db.collection('kittens').find({}).sort({name: 1}).toArray(function(err, result){
+//   console.log(result);
+// });
 
 // routes
 app.get('/', function(req, res){
@@ -68,19 +81,6 @@ app.get('/api', function(req, res){
 
 });
 
-// db.connect({
-//   host: process.env.DB_HOST,
-//   username: process.env.DB_USER,
-//   password: process.env.DB_PASS
-// });
-
-// db.collection('kittens').find({}).toArray(function(err, results){
-//   console.log(results);
-// });
-
-// db.collection('kittens').find({}).sort({name: 1}).toArray(function(err, result){
-//   console.log(result);
-// });
 
 
 

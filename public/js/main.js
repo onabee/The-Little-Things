@@ -68,7 +68,7 @@ $(document).ready(function(){
     if (event.keyCode == 13) {
       $('#search').click();
       $('input').val('');
-      $('.error').val('');
+      $('.error').empty();
     }
   });
 
@@ -76,7 +76,7 @@ $(document).ready(function(){
     if (event.keyCode == 13) {
       $('#search').click();
       $('input').val('');
-      $('.error').val('');
+      $('.error').empty();
     }
   });
 
@@ -85,14 +85,14 @@ $(document).ready(function(){
   $('input').blur(function(){
     if ($('#city').val().length !== 0 && $('#state').val().length !== 0) {
       $('#zip').attr('disabled', 'disabled').css('border-color', '#C4C4C4');
-      $('.error').append('<p> please only enter either city & state OR zipcode </p>').css('color', 'red');
+      $('.error').html('<p> please only enter either city & state OR zipcode </p>').css('color', 'red');
     } else if ($('#zip').val().length != 0){
       $('#city').attr('disabled', 'disabled').css('border-color', '#C4C4C4');
       $('#state').attr('disabled', 'disabled').css('border-color', '#C4C4C4');
-      $('.error').append('<p> please only enter either city & state OR zipcode </p>').css('color', 'red');
+      $('.error').html('<p> please only enter either city & state OR zipcode </p>').css('color', 'red');
     } else {
       $("input").removeAttr('disabled').css('border-color', '#6B9E44');
-      $('.error').val('');
+      $('.error').empty();
     }
    });
   // then show "please only enter either a City & State OR a Zip Code"
