@@ -1,12 +1,8 @@
-// var env = require('node-env-file');
-// var dotenv = require('dotenv').config();
 var express = require('express');
 var path = require('path');
 var request = require('request');
 var bodyParser = require('body-parser');
 // var methodOverride = require('method-override');
-// var logger = require('morgan');
-var config = require('./config');
 var qs = require('querystring');
 var app = express();
 
@@ -20,7 +16,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/bower_components')));
-// app.use(express.logger('dev'));
 // app.use(express.methodOverride());
 
 
@@ -52,39 +47,42 @@ app.get('/api', function(req, res){
   console.log(state);
   console.log(zipCode);
   console.log(api_key);
-  // If the zipCode is entered in index, do following
-  request(base_url + "user_key=" + api_key + "&zipCode=" + zipCode + "&eligible=1", function(err, response, data){
-    console.log(err, data);
-    if (!err && response.statusCode == 200){
-      var charData = qs.parse(data);
-      var charityName = charData.charityName;
-      var city = charData.city;
-      var state = charData.state;
-      var category = charData.category;
-      var zip = charData.zipCode;
-      var mission = charData.missionStatement;
-      var website = charData.website;
+  // If the zipCode is entered in input, do request for zip
+  if (zipCode) {
+    request(base_url + "user_key=" + api_key + "&zipCode=" + zipCode + "&eligible=1", function(err, response, data){
+      console.log(err, data);
+      if (!err && response.statusCode == 200){
+        var charData = qs.parse(data);
+        var charityName = charData.charityName;
+        var city = charData.city;
+        var state = charData.state;
+        var category = charData.category;
+        var zip = charData.zipCode;
+        var mission = charData.missionStatement;
+        var website = charData.website;
 
-      // res.send(data);
-    }
-  })
-  // If the city and state are entered in index, do following
-  request(base_url + "user_key=" + api_key + "&city=" + city + "&state=" + state + "&eligible=1", function(err, response, data){
-    console.log(err, data);
-    if (!err && response.statusCode == 200){
-      var charData = qs.parse(data);
-      var charityName = charData.charityName;
-      var city = charData.city;
-      var state = charData.state;
-      var category = charData.category;
-      var zip = charData.zipCode;
-      var mission = charData.missionStatement;
-      var website = charData.website;
+        res.send(data);
+      }
+    })
+  // If the city and state are entered in input, do following
+  } else if (city || state) {
+    request(base_url + "user_key=" + api_key + "&city=" + city + "&state=" + state + "&eligible=1", function(err, response, data){
+      console.log(err, data);
+      if (!err && response.statusCode == 200){
+        var charData = qs.parse(data);
+        var charityName = charData.charityName;
+        var city = charData.city;
+        var state = charData.state;
+        var category = charData.category;
+        var zip = charData.zipCode;
+        var mission = charData.missionStatement;
+        var website = charData.website;
 
-      res.send(data);
-    }
-  })
-})
+        res.send(data);
+      }
+    })
+  }
+});
 
 
 // app.get('/config', function(req, res){

@@ -63,4 +63,20 @@ $(document).ready(function(){
   $generateActsBtn.on('click', generateActs);
   $generateFactsBtn.on('click', generateFacts);
 
+  // if city field is being typed in, highlight city and state fields
+  // underneath input box, show "please enter a state"
+  // if($('#city').val().length != 0){ ("#state").is(":focus") }
+
+  // if city/state fields are not empty, disable zipcode & vice versa
+  //   $('input').blur(function(){
+    //   if ($('#dis_rm').val().length != 0){
+    //     $('#dis_per').attr('disabled', 'disabled');
+    //   } else if ($('#dis_per').val().length != 0){
+    //     $('#dis_rm').attr('disabled', 'disabled');
+    //   } else {
+    //     $("input").removeAttr('disabled');
+    //   }
+  //  });
+  // then show "please only enter either a City & State OR a Zip Code"
+  
 });
