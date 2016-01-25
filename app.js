@@ -4,7 +4,7 @@ var express = require('express');
 var path = require('path');
 var request = require('request');
 var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
+// var methodOverride = require('method-override');
 // var logger = require('morgan');
 var config = require('./config');
 var qs = require('querystring');
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/bower_components')));
 // app.use(express.logger('dev'));
-app.use(express.methodOverride());
+// app.use(express.methodOverride());
 
 
 // db
