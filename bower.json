@@ -1,0 +1,25 @@
+{
+  "name": "the-little-things",
+  "description": "A social progress inspired app, the little things we can do to make the world a better place.",
+  "main": "app.js",
+  "authors": [
+    "Ona Boseroy <o.boseroy@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/onabee/The-Little-Things#readme",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "handlebars": "~4.0.5",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0"
+  }
+}
