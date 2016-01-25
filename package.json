@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,8 @@
     "fs": "0.0.2",
     "morgan": "^1.6.1",
     "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
   }
 }
