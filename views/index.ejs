@@ -83,12 +83,12 @@
             <!-- ng-if there are no charities matching that zip code, show error message (i.e. "-->
             <!-- ng-if there is, show below info -->
             <!-- make this div itself scrollable so website isn't super long -->
+            <!-- ng-blur instead of doing .blur in main.js -->
             <li ng-repeat="charity in charities.all">
               <h4><strong>{{charity.charityName}}</strong></h4>
               <p>Category: {{charity.category}}</p>
               <p>{{charity.city}}, {{charity.state}} {{charity.zipCode}}</p>
-              <p>{{charity.missionStatement}}</p>
-              <a href="{{charity.website}}">{{charity.website}}</a>
+              <a href="{{charity.url}}">{{charity.url}}</a>
               <!-- they don't have mission statments or websites so url it is -->
             </li>
           </ul>

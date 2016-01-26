@@ -30,6 +30,7 @@ $(document).ready(function(){
     "Turn off the lights in a room you're not using.",
     "Don't keep the water running while you brush your teeth. Keep a cup of water next to you to prevent unnecessarily wasting water.",
     "Don't litter. Wait for a trash bin or recycling bin. It may be annoying to carry trash around with you but it's much less of an inconvenience than the damage that litter causes.",
+    "Be kind to others. You never know what battles someone may be fighting.",
     "Check your privilege. Understand that there are advantages to being a certain ethnicity, gender, or economic class and learn about the inherent trickery of believing that achievement is solely merit-based. Learn from others; life is meant to be a conversation. ",
     "Buy recycled paper instead of regular paper. And recycle your used paper.",
     "Get thick skin. If someone offends you, don't internalize it. People are assholes because of their own personal situations. While that's not a reason for them to be jerks, it's a reason for you to separate yourself from their behavior and not act like a jerk yourself. Be the better person.",
@@ -60,9 +61,13 @@ $(document).ready(function(){
     $generatedDiv.html('<p>' + fact.finfo + '</p>');
   };
 
+  var enterFunc = function(){
+
+  }
+
   $generateActsBtn.on('click', generateActs);
   $generateFactsBtn.on('click', generateFacts);
-
+  $('#search').on('click', enterFunc)
   // search button can be clicked by pressing enter on input fields
   $('#state').keypress(function(event){
     if (event.keyCode == 13) {
