@@ -1,10 +1,18 @@
 # The-Little-Things
 
-My project is going to be a social progress inspired app. It's "The Little Things" as in the little things we can do to make the world a better place. I want the user to be able to see two "generate buttons". One for generating a fact (which I'm thinking about using an API for) and one for generating an "act" (like an act of goodness) which will appear on the body. EAch time a button is clicked, a different fact/act is shown on the DOM. Not just appending a new thing each time. Maybe make certain categories for the fact/act that'll be styled the same but maybe color coded? So like if it's health, use red. for environment, it's green. Etcetera. I'm contemplating making it an express app and using handlebars to render out the data from the api. I think just the generator will be my MVP. Also add a button for creating a new actAs a bonus, I can make a page of resources, maybe use animate.css to make some presentation like thing. 
+The Little Things is a web app centered around social progress. The idea is that there are little things we can do to make the world a better place. In today's society, people have short attention spans and busy schedules. Many people want to make a difference but think they don't have enough time. This app is geared towards the busy people of today's society to show them that making a difference is easy and doesn't take much effort.
 
-Maybe also use an API for volunteer organizations/opportunities near you.
+Link to App:
+https://littlethings.herokuapp.com/
 
-To be honest I really don't know what to do for the ERD. 
+## User Stories
+- Users can search for volunteer opportunities near them by entering a city and state or zip code
+- Users can generate a fact about what's going on in the world.
+- Users can generate a random act of goodness for the betterment of themselves/the world.
+
+## Technologies Used
+HTML, CSS, Javascript, jQuery, NodeJS, Express, Angular, Bower.
+
 
 ![Wireframe](./readme-stuff/wireframe-index.png)
 
