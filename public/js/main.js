@@ -14,27 +14,17 @@ $(document).ready(function(){
 
   acts = [
     "VOTE!",
-    "Stand up for things you really believe in, even if others don't agree, but don't argue blindly.",
-    "Remain quiet during movies. You're not the only one trying to enjoy yourself.",
     "Keep yourself well-informed",
-    "When you do something wrong, own up to it and move on. Getting defensive makes it worse. Apologizing and improving is far more respectable.",
-    "Don't talk about others behind their backs. It's okay to vent to friends and family sometimes if someone upsets or annoys you, but it's a different story when you continue to talk down about a person. Whether or not they know what you're saying, you'll be exuding negative energy and there's no need for that.",
     "Learn about and appreciate other cultures, especially if you don't understand it.",
-    "Learn the proper way to teach children lessons; yelling and being cross with them won't teach them right from wrong.", 
     "Practice good hygiene.",
     "When you're eating, turn the tv off.",
     "Call your parents, family, friends, all those who care for you.",
-    "If you're trying/about to get jiggy wit it, remember that 'NO' MEANS NO. If you don't have consent, back off.",
     "Donate blood (if you can)",
-    "Don't cheat",
     "Turn off the lights in a room you're not using.",
     "Don't keep the water running while you brush your teeth. Keep a cup of water next to you to prevent unnecessarily wasting water.",
     "Don't litter. Wait for a trash bin or recycling bin. It may be annoying to carry trash around with you but it's much less of an inconvenience than the damage that litter causes.",
     "Be kind to others. You never know what battles someone may be fighting.",
-    "Check your privilege. Understand that there are advantages to being a certain ethnicity, gender, or economic class and learn about the inherent trickery of believing that achievement is solely merit-based. Learn from others; life is meant to be a conversation. ",
     "Buy recycled paper instead of regular paper. And recycle your used paper.",
-    "Get thick skin. If someone offends you, don't internalize it. People are assholes because of their own personal situations. While that's not a reason for them to be jerks, it's a reason for you to separate yourself from their behavior and not act like a jerk yourself. Be the better person.",
-    "Don't try dull others' shine. Their success does not mean your failure. Be a person who encourages and supports others. Be someone who makes others' feel good.",
     "Buy from and support small businesses' as much as possible.",
     "Plant bee-friendly plants."
   ];
